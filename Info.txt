@@ -1,0 +1,34 @@
+Game of ClobberBots
+
+An arena game where many bots enter and one bot leaves.  Or we get bored and however many bots are still alive leave. Sometimes we have teams then teammates can all leave. Or perhaps the last two decided to ram or shoot each other and noone leaves. The point is that there is an arena, some bots and some shooting.
+
+Every turn each Clobber Bot has a choice of options; move in one of eight directions, shoot in one of those same directions, or do nothing. A single hit is enough to kill a Clobber Bot. If two Clobber Bots collide both are destroyed and both are awarded a kill. There is a shot clock that limits how often a bot may shoot (default: 20). There is no ammo count or any need to reload. By default bullets travel twice as fast as bots. 
+
+There are several types of games:
+    - Free-For-All: many bots are placed in the arena and shoot it out
+    - Free-For-All (Team): Several teams of bots are placed in the arena and scored by team
+    - Paired: Two bots enter, one bot leaves, or both if time limit is reached.
+    - Paired vs Random: a bot and random bot enter, the non-random bot better be the only one leaving
+
+The bots will be ranked via a point system after participating in a series of tournaments. The default scoring is 1 point per kill and 4 points for each survival. Each tournament will be a large number of matches of a specific type of game.
+
+An interface will be provided as well as several example bots. The random bots will provide examples of implementation ranging from completely random to quasi-random and will demonstrate how to use the interface and game state information provided. You will also be provided with some material on using potential fields for manuevering and bullet avoidance.
+
+Bots are expected to take less than 1/100th of a second to take their turn. They also are expected not to use resource manipulation to interfere with the game or other bots. And they should not use any cpu cycles outside of their turn. Bots that violate these guidelines may be subject to penalties ranging from point deduction to immediate termination.
+
+Every turn each Bot is provided certain information about the current state of the arena. This information consists of: 
+    a) The Bot's current position 
+    b) The current location of the Bot's bullets 
+    c) The location of every other living Bot 
+    d) The location of every other active bullet
+
+Type of game:
+    Non-cooperative: Bots may be designed to ignore certain targets however there is nothing binding them to any agreements.
+    Symmetric: The points gained for kills and survival are the same for all Clobber Bots.
+    Non-Zero-Sum: Dying does not take away points
+    Simultaneous: All Clobber Bots take their turn at the same time.
+    Imperfect but Complete Information: Past moves are known but the choices of the other Bots for the current turn is unknown.
+
+
+
+A version to work off of can be found in cw repository      http://devsource/svn/cwan/user/Jon/ClobberBot
